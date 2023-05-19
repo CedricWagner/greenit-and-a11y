@@ -1,0 +1,17 @@
+---
+import type { LinkType } from '../types/Link';
+import LinkIcon from './LinkIcon/LinkIcon';
+
+interface Props {
+  links: LinkType[];
+}
+const {links} = Astro.props;
+---
+
+<nav class="bg-slate-800 print:hidden">
+    <div class="container mx-auto flex justify-center">
+        {links.map((link) => 
+            <a href={link.href} class="underline p-2">{link.title}</a>
+        )}
+    </div>
+</nav>
