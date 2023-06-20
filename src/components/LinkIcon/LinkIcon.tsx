@@ -15,7 +15,7 @@ const LinkIcon: FC<LinkIconProps> = ({href, title, isIconOnly = false, children,
   const spanClassAttr = isIconOnly ? "sr-only" : "pl-2";
   const content = (
     <>
-      <span className={isIconOnly ? "" : "inline-block w-6"}>{children}</span>
+      <span aria-hidden="true" className={isIconOnly ? "" : "inline-block w-6"}>{children}</span>
       <span className={isIconOnly ? "sr-only" : "pl-2"}>{title}</span>
     </>
   );
